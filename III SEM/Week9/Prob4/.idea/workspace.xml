@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bfa0e0e8-b00a-42fd-b068-1958b88e7725" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Prob3/src/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Prob5/src/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Prob5/src/CurrentAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Prob5/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week8/Prob2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week8/Prob2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week8/Prob2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week8/Prob2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week8/Prob2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week8/Prob2/Prob2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week8/Prob2/src/Fruit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week8/Prob2/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week9/Prob1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week9/Prob1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week9/Prob1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week9/Prob1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week9/Prob1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week9/Prob1/Prob1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week9/Prob1/src/Bus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week9/Prob1/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week9/Prob1/src/Vehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week9/Prob2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week9/Prob2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week9/Prob2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week9/Prob2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week9/Prob2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week9/Prob2/Prob2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week9/Prob2/src/Department.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week9/Prob2/src/Faculty.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week9/Prob2/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PracticeSesh2/Week9/Prob2/src/University.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="33dzZyorHVIo9Io7AVTYlxXiL6Y" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/mustafa/Developer/Code/Java/Lab/Week9/Prob4/src/Main.java&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bfa0e0e8-b00a-42fd-b068-1958b88e7725" name="Changes" comment="" />
+      <created>1759661798474</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1759661798474</updated>
+    </task>
+    <servers />
+  </component>
+</project>

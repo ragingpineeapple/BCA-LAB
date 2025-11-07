@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Prob1/Prob1.iml" filepath="$PROJECT_DIR$/Prob1/Prob1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prob10/Prob10.iml" filepath="$PROJECT_DIR$/Prob10/Prob10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prob2/Prob2.iml" filepath="$PROJECT_DIR$/Prob2/Prob2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prob3/Prob3.iml" filepath="$PROJECT_DIR$/Prob3/Prob3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prob4/Prob4.iml" filepath="$PROJECT_DIR$/Prob4/Prob4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prob5/Prob5.iml" filepath="$PROJECT_DIR$/Prob5/Prob5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prob6/Prob6.iml" filepath="$PROJECT_DIR$/Prob6/Prob6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prob7/Prob7.iml" filepath="$PROJECT_DIR$/Prob7/Prob7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prob8/Prob8.iml" filepath="$PROJECT_DIR$/Prob8/Prob8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prob9/Prob9.iml" filepath="$PROJECT_DIR$/Prob9/Prob9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Week4.iml" filepath="$PROJECT_DIR$/.idea/Week4.iml" />
+    </modules>
+  </component>
+</project>

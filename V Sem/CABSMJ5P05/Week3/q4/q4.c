@@ -10,7 +10,7 @@ int main(void){
 		char arr[n][20];
 		for(i = 0; i < n; i++){
 			printf("Enter process %d name: ", i);
-			scanf("%s", &arr[i]);
+			scanf("%s", arr[i]);
 		}
 		for(i = 0; i < n; i++){
 			printf("%s\n", arr[i]);

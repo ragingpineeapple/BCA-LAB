@@ -1,5 +1,3 @@
-//Shortest process finger: Find and display the process with the shortest burst time.
-
 #include <stdio.h>
 
 int main(void){

@@ -12,6 +12,9 @@ int main(void){
 			printf("Enter process %d name: ", i);
 			scanf("%s", &arr[i]);
 		}
+
+		printf("\nOrder of execution: \n\n");
+		
 		for(i = 0; i < n; i++){
 			printf("%s\n", arr[i]);
 		}

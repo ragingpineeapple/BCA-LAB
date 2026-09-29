@@ -11,9 +11,9 @@ int main(void){
 	if(s1 == 1 && s2 == 1){
 		utp = ((bt)/(bt+it))*100;
 	
-		printf("The cpu uitilization is: %lf", utp);
+		printf("The cpu uitilization is: %.2lf\n", utp);
 	}
 	else{
-		printf("Enter double.");
+		printf("Enter double.\n");
 	}
 }

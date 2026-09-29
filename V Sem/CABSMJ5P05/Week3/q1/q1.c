@@ -1,5 +1,3 @@
-//Burst time average: Input burst time for n processes and calculate total and average burst time.
-
 #include <stdio.h>
 
 int main(void){
@@ -22,3 +20,4 @@ int main(void){
 
     printf("\nTotal burst time: %d\nAverage burst time: %d\n", tot, avg);
 }
+

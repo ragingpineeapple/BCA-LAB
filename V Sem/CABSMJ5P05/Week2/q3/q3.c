@@ -12,10 +12,10 @@ int main(void){
 	s2 = scanf("%lf", &t);
 	
 	if(s1 == 1 && s2 == 1){
-		printf("Throughput: %lf", n/t);
+		printf("\nThroughput: %.3lf\n", n/t);
 	}
 	else{
-		printf("Processes should be an integer and time should be a float!");
+		printf("\nProcesses should be an integer and time should be a float!\n");
 	}
 	
 	

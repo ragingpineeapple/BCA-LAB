@@ -12,7 +12,7 @@ void swap(int *x, int *y);
 void exec(struct processes *arr, int l, int tt);
 
 int main(void){
-    int x, i, j, tt, ct, com;
+    int x, i, tt;
 
     printf("Enter number of processes: ");
     scanf("%d", &x);
@@ -25,20 +25,7 @@ int main(void){
         tt += p1[i].bt;
     }
 
-    ct = 0;
-
-    /*printf("PID AT  BT\n");
-    for(i = 0; i < x; i++){
-        printf("%d   %d   %d\n", p1[i].pid, p1[i].at, p1[i].bt);
-    }*/
-
     qs(p1, 0, x-1);
-
-    /*printf("AFTER SORT: \n");
-    printf("PID AT  BT\n");
-    for(i = 0; i < x; i++){
-        printf("%d   %d   %d\n", p1[i].pid, p1[i].at, p1[i].bt);
-    }*/
     
     exec(p1, x, tt);
 
@@ -105,6 +92,8 @@ void gantt(int time[][3], int k){
     for(i = 0; i < k; i++){
         printf("%d    ", time[i][2]);
     }
+
+    printf("\n\n");
 }
 
 void exec(struct processes *arr, int l, int tt){

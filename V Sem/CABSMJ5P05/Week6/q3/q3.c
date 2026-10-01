@@ -1,93 +1,102 @@
-#include <stdio.h>
+#include<stdio.h>
 
-struct proc{
-    int pid;
-    int at;
-    int bt;
-    int ct;
-    int comp;
+struct process {
+	int id;
+	int arrivalTime;
+	int burstTime;
+	int turnAroundTime;
+	int waitingTime;
+	int isComp;
 };
 
-void exec(struct proc p[], int x);
-void gantt(int arr[][3], int x);
-
-int main(void){
-    int x;
-    printf("Enter number of processes: ");
-    scanf("%d", &x);
-    struct proc p1[x];
-
-    for(int i = 0; i < x; i++){
-        printf("Enter process %i, at, and bt: ", i);
-        scanf("%d %d", &p1[i].at, &p1[i].bt);
-        p1[i].comp = 0;
-    }
-
-    exec(p1, x);
+void inputProcess(struct process p[], int n){
+	int i;
+	for(i = 0; i < n; i++){
+		p[i].id = i + 1;
+		p[i].isComp = 0;
+		printf("Enter arrival time and burst time for process %d: ", i + 1);
+		scanf("%d %d", &p[i].arrivalTime, &p[i].burstTime);
+	}
 }
 
-void gantt(int arr[][3], int x){
-    int i;
-    for(i = 0; i < x; i++){
-        printf("%d, ", arr[i][0]);
-    }
-
-    printf("\n\n");
-
-    for(i = 0; i < x; i++){
-        printf("%d, ", arr[i][1]);
-    }
-
-    printf("\n\n");
-
-    for(i = 0; i < x; i++){
-        printf("%d, ", arr[i][2]);
-    }
-
-    printf("\n\n");
-
+void sortByArrivalTime(struct process p[], int n){
+	int i, j;
+	struct process temp;
+	for(i = 0; i < n - 1; i++){
+		for(j = 0; j < n - i -1; j++){
+			if(p[j].arrivalTime > p[j + 1].arrivalTime){
+				temp = p[j];
+				p[j] = p[j + 1];
+				p[j + 1] = temp;
+			}
+		}
+	}
 }
 
-void exec(struct proc p[], int x){
-    int proc=0, i, index, min_bt, ct=0, procs[x][3], c=0, min_at;
+void calculateTime(struct process p[], int n){
+	int i;
+	int time = 0;
+	sortByArrivalTime(p, n);
+	for(i = 0; i < n; i++){
+		if(time < p[i].arrivalTime){
+			time = p[i].arrivalTime;
+		}
+		time += p[i].burstTime;
+		p[i].turnAroundTime = time - p[i].arrivalTime;
+		p[i].waitingTime = p[i].turnAroundTime - p[i].burstTime;
+	}
+}
 
-    while(proc < x){
-        index = -1;
-        min_bt = 99999;
-        for(i = 0; i < x; i++){
-            if(p[i].at <= ct && p[i].comp != 1){
-                if(p[i].bt < min_bt){
-                    min_bt = p[i].bt;
-                    index = i;
-                }
-                else if(p[i].bt == min_bt){
-                    if(p[i].at < p[index].at){
-                        index = i;
-                    }
-                }
-            }
-        }
+void SJN(struct process p[], struct process q[], int n){
+	int i, j;
+	int time = 0;
+	for(i = 0; i < n; i++){
+		int shortest = -1;
+		for(j = 0; j < n; j++){
+			if(p[j].arrivalTime <= time && p[j].isComp != 1 && (shortest == -1 || p[j].burstTime < p[shortest].burstTime)){
+				shortest = j;
+			}
+		}
+		p[shortest].isComp = 1;
+		time += p[shortest].burstTime;
+		q[i] = p[shortest];
+	}
+	
+}
 
-        if(index != -1){
-            procs[c][0] = ct;
-            procs[c][1] = index;
-            ct += p[index].bt;
-            procs[c][2] = ct;
-            p[index].comp = 1;
-            p[index].ct = ct;
-            proc++;
-            c++;
-        }
-        else{
-            int min_at = 99999;
-            for(i = 0; i < x; i++){
-                if(p[i].at <= min_at && p[i].comp != 1){
-                    min_at = p[i].at;
-                }
-            }
-            ct = min_at;
-        }
-    }
+void displayAllProcesses(struct process p[], int n){
+	int i;
+	double avgWT, avgTAT;
+	int sumWT = 0, sumTAT = 0;
+	printf("\nProcess\tArrivalTime\tBurstTime\tTAT\tWaitingTime\n");
+	for(i = 0; i < n; i++){
+		sumWT += p[i].waitingTime;
+		sumTAT += p[i].turnAroundTime;
+		
+		printf("P%d\t%d\t\t%d\t\t%d\t\t%d\n", 
+			p[i].id, 
+			p[i].arrivalTime, 
+			p[i].burstTime, 
+			p[i].turnAroundTime, 
+			p[i].waitingTime);
+	}
+	avgWT = (double) sumWT / n;
+	avgTAT = (double) sumTAT / n;
+	printf("Average Waiting Time: %.2f\nAverage Turn Around Time: %.2f\n", avgWT, avgTAT);
+}
 
-    gantt(procs, x);
+int main(){
+	int n, i;
+	printf("Enter number of processes: ") ;
+	scanf("%d", &n);
+
+	struct process p[n];
+	struct process q[n];
+	inputProcess(p, n);
+	SJN(p, q, n);
+	calculateTime(q, n);
+	printf("\nSJN:\n");
+	displayAllProcesses(q, n);
+
+	return 0;
 }

@@ -1,39 +1,45 @@
 #include <stdio.h>
-	
-	
-int a[1000], b[1000];
+#include <omp.h>
 
-int main(void){
-	
-	int i, l = 1000, dot=0;
-	double t1, t2, t3, t4;
-	
-	for(i = 0; i < l; i++){
-		a[i] = i;
-		b[i] = i;
-	}
-	
-	t1 = omp_get_wtime();
-	
-	for(i = 0; i < l; i++){
-		dot += (a[i] * b[i]);
-	}
-	
-	t2 = omp_get_wtime();
-	
-	printf("Serial approach: %d\n", dot);
-	
-	t3 = omp_get_wtime();
-	
-	#pragma omp parallel for
-	for(i = 0; i < l; i++){
-		dot += (a[i] * b[i]);
-	}
-	
-	t4 = omp_get_wtime();
-	
-	printf("Parallel approach: %d\n", dot);
-	
-	printf("Time serial: %lf, Time paralel: %lf\n", t2-t1, t4-t3);
+#define N 10000000
 
+double A[N], B[N];
+
+int main() {
+    int i;
+
+
+    for (i = 0; i < N; i++) {
+        A[i] = (double)(i + 1);
+        B[i] = 1.0;
+    }
+
+    double stt, et;
+
+    double sdot = 0.0;
+    stt = omp_get_wtime();
+
+    for (i = 0; i < N; i++) {
+        sdot += A[i] * B[i];
+    }
+
+    et = omp_get_wtime();
+    double st = et - stt;
+
+    double pdot = 0.0;
+    stt = omp_get_wtime();
+
+    #pragma omp parallel for
+    for (i = 0; i < N; i++) {
+        pdot += A[i] * B[i];
+    }
+
+    et = omp_get_wtime();
+    double pt = et - stt;
+
+    printf("Serial Dot Product:%f\n", sdot);
+    printf("Serial Time:%f seconds\n\n", st);
+
+    printf("Parallel Dot Product:%f\n", pdot);
+    printf("Parallel Time:%f seconds\n", pt);
 }
